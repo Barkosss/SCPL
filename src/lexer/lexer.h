@@ -4,8 +4,9 @@
 #include<string>
 
 enum class TokenType {
-    PLUS, MINUS, START, SLASH,
-    NUMBER
+    PLUS, MINUS, STAR, SLASH,
+    NUMBER,
+    END_OF_FILE
 };
 
 struct Token {
@@ -21,6 +22,6 @@ class Lexer {
     int line;
 
 public:
-    Lexer(const std::string& source) : source(source) {}
+    Lexer(const std::string &source) : source(source), pos(0), line(1) {}
     std::vector<Token> tokenize();
 };
