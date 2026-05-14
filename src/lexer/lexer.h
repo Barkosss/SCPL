@@ -5,7 +5,8 @@
 
 enum class TokenType {
     PLUS, MINUS, STAR, SLASH,
-    NUMBER,
+    IDENTIFIER,
+    IF, ELSE, SWITCH, CASE,
     END_OF_FILE
 };
 
@@ -22,6 +23,6 @@ class Lexer {
     int line;
 
 public:
-    Lexer(const std::string &source) : source(source), pos(0), line(1) {}
+    Lexer(const std::string &source) : source(source), pos(1), line(1) {}
     std::vector<Token> tokenize();
 };
