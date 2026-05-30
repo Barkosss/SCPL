@@ -56,8 +56,6 @@ After building, the `scc` executable will be in the `build/` directory.
 | ---------------------------- | -------------------- |
 | `scc file.c`                 | Compile as C         |
 | `scc -x file.cpp`            | Compile as C++       |
-| `scc -std=c99 file.c`        | Specify C standard   |
-| `scc -x -std=c++17 file.cpp` | Specify C++ standard |
 
 ## Example
 
